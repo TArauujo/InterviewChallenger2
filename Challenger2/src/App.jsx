@@ -30,7 +30,12 @@ export default function LoginForm() {
   }
 
   const handleSubmit = () => {
-    console.log('submited')
+    console.log('submited');
+
+    let values = {email: email, password: password};
+    login(values).then(() => {}).catch((error) => {
+      console.log(error);
+    });
   }
   
   return (
